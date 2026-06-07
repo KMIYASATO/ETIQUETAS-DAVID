@@ -17,11 +17,11 @@ document.addEventListener("mousemove", (e) => {
 document.querySelectorAll("a, button, input, select, textarea").forEach(el => {
   el.addEventListener("mouseenter", () => {
     cursorFollower.style.transform = "translate(-50%, -50%) scale(1.8)";
-    cursorFollower.style.borderColor = "#4A7C25";
+    cursorFollower.style.borderColor = "#525252";
   });
   el.addEventListener("mouseleave", () => {
     cursorFollower.style.transform = "translate(-50%, -50%) scale(1)";
-    cursorFollower.style.borderColor = "#4A7C25";
+    cursorFollower.style.borderColor = "#525252";
   });
 });
 
@@ -75,12 +75,12 @@ formulario.addEventListener("submit", async function (e) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(datos),
     });
-    mensajeRespuesta.textContent = "✅ Solicitud enviada. Te contactaremos pronto.";
-    mensajeRespuesta.style.color = "#2D5016";
+    mensajeRespuesta.textContent = "Solicitud enviada. Te contactaremos pronto.";
+    mensajeRespuesta.style.color = "#111111";
     formulario.reset();
   } catch (error) {
-    mensajeRespuesta.textContent = "❌ Hubo un error. Intenta de nuevo.";
-    mensajeRespuesta.style.color = "#CC2200";
+    mensajeRespuesta.textContent = "Hubo un error. Intenta de nuevo.";
+    mensajeRespuesta.style.color = "#525252";
   }
 
   boton.textContent = "Enviar solicitud →";

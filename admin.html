@@ -7,21 +7,21 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <style>
   :root {
-    --bg: #F7F6F2;
+    --bg: #F5F5F5;
     --surface: #FFFFFF;
-    --border: #E4E2DA;
-    --border-strong: #C8C5BB;
-    --text: #1A1916;
-    --text-2: #6B6860;
-    --text-3: #A8A59E;
-    --accent: #2D5016;
-    --accent-light: #EAF0E2;
-    --amber: #8C5C00;
-    --amber-light: #FFF3D6;
-    --red: #8C1F1F;
-    --red-light: #FDEAEA;
-    --blue: #1A3D6B;
-    --blue-light: #E6EEF8;
+    --border: #E0E0E0;
+    --border-strong: #A3A3A3;
+    --text: #111111;
+    --text-2: #666666;
+    --text-3: #9A9A9A;
+    --accent: #111111;
+    --accent-light: #E8E8E8;
+    --amber: #525252;
+    --amber-light: #F0F0F0;
+    --red: #3F3F46;
+    --red-light: #EEEEEE;
+    --blue: #525252;
+    --blue-light: #F0F0F0;
     --radius: 10px;
     --radius-sm: 6px;
     --shadow: 0 1px 3px rgba(0,0,0,0.07), 0 1px 2px rgba(0,0,0,0.04);
@@ -104,9 +104,9 @@
   }
   .btn:hover { background: var(--bg); border-color: var(--border-strong); }
   .btn-primary { background: var(--accent); color: white; border-color: var(--accent); }
-  .btn-primary:hover { background: #1f3a10; border-color: #1f3a10; }
-  .btn-danger { background: var(--red-light); color: var(--red); border-color: #f0c0c0; }
-  .btn-danger:hover { background: #fad5d5; }
+  .btn-primary:hover { background: #333333; border-color: #333333; }
+  .btn-danger { background: var(--red-light); color: var(--red); border-color: var(--border); }
+  .btn-danger:hover { background: #E5E5E5; }
   .btn-sm { padding: 5px 12px; font-size: 12px; }
 
   .error-msg { font-size: 12px; color: var(--red); margin-top: 8px; display: none; }
@@ -231,7 +231,7 @@
     font-family: 'DM Sans', sans-serif;
   }
   .filter-pill:hover { border-color: var(--border-strong); color: var(--text); }
-  .filter-pill.active { background: var(--accent-light); color: var(--accent); border-color: #b5cfa0; }
+  .filter-pill.active { background: var(--accent-light); color: var(--accent); border-color: var(--border-strong); }
 
   .search-input {
     margin-left: auto;
@@ -265,7 +265,7 @@
     vertical-align: middle;
   }
   tr:last-child td { border-bottom: none; }
-  tr:hover td { background: #FAFAF8; }
+  tr:hover td { background: #FAFAFA; }
 
   .badge {
     display: inline-block;
@@ -276,10 +276,10 @@
   }
   .badge-pendiente { background: var(--amber-light); color: var(--amber); }
   .badge-atendido { background: var(--accent-light); color: var(--accent); }
-  .badge-cerrado { background: #F0EFE9; color: var(--text-2); }
+  .badge-cerrado { background: #F0F0F0; color: var(--text-2); }
   .badge-proceso { background: var(--blue-light); color: var(--blue); }
   .badge-listo { background: var(--accent-light); color: var(--accent); }
-  .badge-entregado { background: #F0EFE9; color: var(--text-2); }
+  .badge-entregado { background: #F0F0F0; color: var(--text-2); }
   .badge-critico { background: var(--red-light); color: var(--red); }
   .badge-bajo { background: var(--amber-light); color: var(--amber); }
   .badge-ok { background: var(--accent-light); color: var(--accent); }
@@ -408,18 +408,18 @@
     </div>
 
     <button class="nav-item active" onclick="showPage('consultas', this)">
-      <span class="nav-icon">📋</span> Consultas
+      <span class="nav-icon">01</span> Consultas
     </button>
     <button class="nav-item" onclick="showPage('inventario', this)">
-      <span class="nav-icon">📦</span> Inventario
+      <span class="nav-icon">02</span> Inventario
     </button>
     <button class="nav-item" onclick="showPage('produccion', this)">
-      <span class="nav-icon">⚙️</span> Producción
+      <span class="nav-icon">03</span> Producción
     </button>
 
     <div class="nav-logout">
       <button class="nav-item" onclick="logout()" style="color:var(--red);">
-        <span class="nav-icon">↩</span> Cerrar sesión
+        <span class="nav-icon">--</span> Cerrar sesión
       </button>
     </div>
   </aside>
@@ -697,9 +697,9 @@ function mostrarToast(msg, tipo = 'ok') {
   t.style.cssText = `
     position:fixed; bottom:24px; right:24px; z-index:9999;
     padding:12px 20px; border-radius:8px; font-size:13px; font-weight:500;
-    background:${tipo === 'ok' ? '#EAF0E2' : '#FDEAEA'};
-    color:${tipo === 'ok' ? '#2D5016' : '#8C1F1F'};
-    border:1px solid ${tipo === 'ok' ? '#b5cfa0' : '#f0c0c0'};
+    background:${tipo === 'ok' ? '#E8E8E8' : '#EEEEEE'};
+    color:${tipo === 'ok' ? '#111111' : '#3F3F46'};
+    border:1px solid ${tipo === 'ok' ? '#A3A3A3' : '#CFCFCF'};
     box-shadow:0 4px 12px rgba(0,0,0,0.1);
     transition: opacity 0.3s;
   `;

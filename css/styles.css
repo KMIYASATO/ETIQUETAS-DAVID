@@ -1,15 +1,15 @@
 /* ===== VARIABLES ===== */
 :root {
-  --verde: #2D5016;
-  --verde-claro: #4A7C25;
-  --verde-menta: #7AB648;
-  --crema: #F7F3ED;
-  --crema-oscura: #EDE6D8;
-  --marron: #3D2B1F;
-  --marron-claro: #6B4C38;
-  --dorado: #C4A84A;
-  --texto: #1A1A1A;
-  --texto-suave: #6B6B6B;
+  --verde: #0A0A0A;
+  --verde-claro: #3F3F46;
+  --verde-menta: #8A8A8A;
+  --crema: #F5F5F5;
+  --crema-oscura: #D4D4D4;
+  --marron: #0A0A0A;
+  --marron-claro: #404040;
+  --dorado: #E5E5E5;
+  --texto: #111111;
+  --texto-suave: #666666;
   --blanco: #FFFFFF;
 }
 
@@ -56,7 +56,7 @@ body {
   transition: all 0.4s ease;
 }
 .navbar.scrolled {
-  background: rgba(247,243,237,0.97);
+  background: rgba(245,245,245,0.97);
   padding: 16px 60px;
   border-bottom: 1px solid var(--crema-oscura);
   backdrop-filter: blur(10px);
@@ -201,7 +201,7 @@ body {
 }
 .tag-mockup:hover {
   transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(45,80,22,0.1);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.08);
 }
 .tag-mockup--2 { background: var(--verde); margin-top: 24px; }
 .tag-mockup--2 .tag-label { color: var(--blanco); }
@@ -266,8 +266,8 @@ body {
   border: 1px solid var(--verde);
 }
 .btn-ghost:hover { background: var(--verde); color: var(--blanco); }
-.btn-whatsapp { background: #25D366; color: var(--blanco); }
-.btn-whatsapp:hover { background: #1EB857; transform: translateY(-2px); }
+.btn-whatsapp { background: var(--texto); color: var(--blanco); }
+.btn-whatsapp:hover { background: var(--verde-claro); transform: translateY(-2px); }
 .btn-full { width: 100%; justify-content: center; }
 
 /* ===== CONTAINER ===== */
@@ -320,7 +320,7 @@ body {
 .img-caption {
   position: absolute;
   bottom: 16px; left: 16px;
-  background: rgba(247,243,237,0.9);
+  background: rgba(245,245,245,0.92);
   padding: 8px 14px;
   font-size: 0.75rem;
   color: var(--texto-suave);
@@ -398,7 +398,7 @@ body {
   position: absolute;
   top: 20px; right: 20px;
   background: var(--dorado);
-  color: var(--marron);
+  color: var(--texto);
   font-size: 0.68rem;
   font-weight: 500;
   padding: 4px 10px;
@@ -424,7 +424,7 @@ body {
 }
 .cliente-item:hover { background: var(--crema-oscura); }
 .cliente-item img { max-width: 140px; max-height: 80px; object-fit: contain; filter: grayscale(100%); opacity: 0.6; transition: all 0.3s; }
-.cliente-item:hover img { filter: grayscale(0%); opacity: 1; }
+.cliente-item:hover img { filter: grayscale(100%); opacity: 1; }
 .politicas {
   display: flex;
   flex-wrap: wrap;
@@ -462,7 +462,13 @@ body {
   transition: transform 0.2s;
 }
 .dato-item:hover { transform: translateX(4px); }
-.dato-icon { font-size: 1.2rem; }
+.dato-icon {
+  width: 34px;
+  color: var(--texto);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
 .dato-item div { display: flex; flex-direction: column; gap: 2px; }
 .dato-label { font-size: 0.72rem; color: var(--texto-suave); letter-spacing: 2px; text-transform: uppercase; }
 .dato-val { font-size: 0.95rem; color: var(--texto); font-weight: 500; }
